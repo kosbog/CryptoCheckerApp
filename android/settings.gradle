@@ -1,0 +1,3 @@
+rootProject.name = 'CryptoCheckerApp'
+
+include ':app'
