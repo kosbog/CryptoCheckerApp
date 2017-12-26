@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, ScrollView } from 'react-native';
 import API from '../utils/utils';
 import CoinsDetail from './CoinsDetail';
 
@@ -12,7 +12,7 @@ class CoinsList extends Component {
     }
 
     componentDidMount() {
-        API.getCoinsList().then((response) => {
+        API.getCoinsList('EUR').then((response) => {
             this.setState({
                 coins: response.data
             });
@@ -30,10 +30,10 @@ class CoinsList extends Component {
 
     render() {
         return (
-            <View>
+            <ScrollView>
                 { this.state.coins !== null &&
                     this.renderCoinsList(this.state.coins)}
-            </View>
+            </ScrollView>
         );
     }
 }

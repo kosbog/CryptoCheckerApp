@@ -13,7 +13,7 @@ const validCurrency = (value) => {
         if (value === item) {
             return item;
         } else {
-            return 'EUR'
+            return 'USD';
         }
     });
 }

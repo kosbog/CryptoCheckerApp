@@ -1,21 +1,40 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, Image, Linking } from 'react-native';
 import Card from './Card';
 import CardSection from './CardSection';
+import Button from '../components/Button';
+import ttt from '../assets/image/btc.png';
+import IMAGES from '../IMAGES';
 
 const CoinsDetail = ({ coinItem }) => {
+
+    const symbolImage = (val) => {
+        let images = IMAGES._ICONS;
+        for(key in images) {
+            if (key === val) {
+                return images[key];
+            }
+        }
+    }
+
     return (
         <Card>
-            <CardSection>
+            <CardSection direction='row' justify='space-between' align='center'>
                 <View style={style.imageContainer}>
-                    <Text> | </Text>
-                    <Text>{coinItem.name}</Text>
-                    <Text> | </Text>
+                    {/* FIXME: fix image import */} 
+                     <Image source={symbolImage(coinItem.symbol)}></Image>
                 </View>
                 <View style={style.textContainer}>
-                    <Text>{coinItem.symbol}</Text>
+                    <Text style={style.titleSize}>{coinItem.symbol}</Text>
                     <Text>{coinItem.price_usd}</Text>
                 </View>
+                <Button onPress={() => Linking.openURL('https://www.gogle.com')}>
+                    More info
+                </Button>
+            </CardSection>
+            
+            <CardSection>
+                <Image source={require('../assets/image/btc.png')} style={style.imageItem}></Image>
             </CardSection>
         </Card>
     );
@@ -28,8 +47,16 @@ const style = {
     },
     imageContainer: {
         flexDirection: 'column',
-        justifyContent: 'space-around',
+        justifyContent: 'center',
         alignItems: 'center'
+    },
+    titleSize: {
+        fontSize: 18
+    },
+    imageItem: {
+        height: 100,
+        flex: 1,
+        width: null
     }
 }
 

@@ -5,4 +5,4 @@
 
 # API (cryptocurrencies data)
 
-- https://www.cryptocompare.com/api/#-api-data-
+- https://coinmarketcap.com/api/
