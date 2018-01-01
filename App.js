@@ -2,8 +2,7 @@ import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View} from 'react-native';
 import firebase from "firebase";
 import {Provider} from 'react-redux';
-import {createStore} from 'redux';
-import reducers from './src/reducers';
+import store from './src/store';
 import {Header, Button, Spinner} from './src/components/common';
 import LoginForm from './src/components/LoginForm';
 import CoinsList from './src/components/CoinsList';
@@ -64,11 +63,10 @@ export default class App extends Component < {} > {
 
   render() {
     return (
-      <Provider store={createStore}>
+      <Provider store={store}>
         <View style={{
           flex: 1
         }}>
-
           <Header headerText={'Bit Currencies Checker'}></Header >
           {this.renderContent()}
         </View>

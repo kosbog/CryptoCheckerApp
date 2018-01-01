@@ -2,6 +2,11 @@ import axios from 'axios';
 import CONST from '../CONSTANTS';
 
 const API = {
+    // API https://coinmarketcap.com/api/
+    getDefaultCoinsList: (currency) => {
+        let temp = validCurrency(currency);
+        return axios.get(`https://api.coinmarketcap.com/v1/ticker/?limit=10`);
+    },
     getCoinsList: (currency) => {
         let temp = validCurrency(currency);
         return axios.get(`https://api.coinmarketcap.com/v1/ticker/?convert=${temp}`);
