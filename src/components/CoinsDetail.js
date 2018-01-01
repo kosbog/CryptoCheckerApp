@@ -3,7 +3,6 @@ import { View, Text, Image, Linking } from 'react-native';
 import Card from './Card';
 import CardSection from './CardSection';
 import Button from '../components/Button';
-import ttt from '../assets/image/btc.png';
 import IMAGES from '../IMAGES';
 
 const CoinsDetail = ({ coinItem }) => {
