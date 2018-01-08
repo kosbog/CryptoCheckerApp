@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import { View, Text, ScrollView } from 'react-native';
+import { View, Text, ScrollView, FlatList } from 'react-native';
+import {connect} from 'react-redux';
+import CONST from '../CONSTANTS';
 import API from '../utils/utils';
 import CoinsDetail from './CoinsDetail';
 
@@ -19,23 +21,28 @@ class CoinsList extends Component {
         });
     }
 
-    renderCoinsList(list) {
-        console.log(list);
-        return list.map((coinItem, index) => {
-                return (
-                    <CoinsDetail key={coinItem.name} coinItem={coinItem} />
-                )
-        });
-    }
+    keyExtractor = (item, index) => item.symbol;
+
+    renderCoinsList = (item) => (<CoinsDetail key={item.name} coinItem={item} />);
 
     render() {
         return (
-            <ScrollView>
+            <View>
                 { this.state.coins !== null &&
-                    this.renderCoinsList(this.state.coins)}
-            </ScrollView>
+                    <FlatList
+                        keyExtractor={this.keyExtractor}
+                        data={this.state.coins}
+                        renderItem={({item})=>this.renderCoinsList(item)}>
+                    </FlatList>}
+            </View>
         );
     }
 }
 
-export default CoinsList;
+const mapStateToProps = (state) => {
+    return {
+        coins: state.coins
+    }
+}
+
+export default connect(mapStateToProps)(CoinsList);

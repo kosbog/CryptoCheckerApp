@@ -1,13 +1,13 @@
-import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View} from 'react-native';
+import React, { Component } from 'react';
+import { Platform, StyleSheet, Text, View } from 'react-native';
 import firebase from "firebase";
-import {Provider} from 'react-redux';
+import { Provider } from 'react-redux';
 import store from './src/store';
-import {Header, Button, Spinner} from './src/components/common';
+import { Header, Button, Spinner } from './src/components/common';
 import LoginForm from './src/components/LoginForm';
 import CoinsList from './src/components/CoinsList';
 
-export default class App extends Component < {} > {
+export default class App extends Component<{}> {
 
   constructor(props) {
     super(props);
@@ -28,35 +28,29 @@ export default class App extends Component < {} > {
     };
 
     firebase.initializeApp(config);
-    firebase
-      .auth()
-      .onAuthStateChanged((user) => {
-        user
-          ? this.setState({loggedIn: true})
-          : this.setState({loggedIn: false});
-      })
+    firebase.auth().onAuthStateChanged((user) => {
+      user
+        ? this.setState({ loggedIn: true })
+        : this.setState({ loggedIn: false });
+    })
   }
 
   renderContent() {
+    const { containerStyle } = styles;
     switch (this.state.loggedIn) {
       case true:
         return (
           <View>
-            <CoinsList/>
-            <Button
-              onPress={() => {
-              firebase
-                .auth()
-                .signOut()
-            }}>Log out!</Button>
+            <Button style={containerStyle} onPress={() => { firebase.auth().signOut() }}>Log out!</Button>
+            <CoinsList />
           </View>
         );
         break;
       case false:
-        return <LoginForm/>
+        return <LoginForm />
         break;
       default:
-        return <Spinner/>
+        return <Spinner />
         break;
     }
   }
@@ -74,3 +68,11 @@ export default class App extends Component < {} > {
     );
   }
 }
+
+const styles = StyleSheet.create({
+  containerStyle: {
+    flex: 1,
+    borderWidth: 1,
+    borderColor: 'blue'
+  }
+});

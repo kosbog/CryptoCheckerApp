@@ -1,40 +1,66 @@
-import React, { Component } from 'react';
-import { View, Text, Image, Linking } from 'react-native';
+import React, {Component} from 'react';
+import {View, Text, Image, LayoutAnimation} from 'react-native';
 import {Button, Card, CardSection} from './common';
+import * as actions from '../actions';
+import {connect} from 'react-redux';
 import IMAGES from '../IMAGES';
 
-const CoinsDetail = ({ coinItem }) => {
+class CoinsDetail extends Component {
 
-    const symbolImage = (val) => {
+    constructor(props) {
+        super(props);
+    }
+
+    componentWillUpdate() {
+        LayoutAnimation.spring();
+    }
+    
+    symbolImage = (val) => {
         let images = IMAGES._ICONS;
-        for(key in images) {
+        for (key in images) {
             if (key === val) {
                 return images[key];
             }
         }
     }
 
-    return (
-        <Card>
-            <CardSection direction='row' justify='space-between' align='center'>
-                <View style={style.imageContainer}>
-                    {/* FIXME: fix image import */} 
-                     <Image source={symbolImage(coinItem.symbol)}></Image>
-                </View>
-                <View style={style.textContainer}>
-                    <Text style={style.titleSize}>{coinItem.symbol}</Text>
-                    <Text>{coinItem.price_usd}</Text>
-                </View>
-                <Button onPress={() => Linking.openURL('https://www.gogle.com')}>
-                    More info
-                </Button>
-            </CardSection>
-            
-            <CardSection>
-                <Image source={require('../assets/image/btc.png')} style={style.imageItem}></Image>
-            </CardSection>
-        </Card>
-    );
+    getCoinSymbol=(symbol)=>{
+        return this.props.selectCoin(symbol);
+    }
+
+    renderCoinDescription =()=>{
+        return this.props.expanded
+            ? <CardSection>
+                    <Text>Irs works!</Text>
+                </CardSection>
+            : null;
+    }
+
+    render() {
+        const {coinItem} = this.props;
+        return (
+            <Card>
+                <CardSection direction='row' justify='space-between' align='center'>
+                    <View style={style.imageContainer}>
+                        {/* FIXME: fix image import */}
+                        <Image source={this.symbolImage(coinItem.symbol)}></Image>
+                    </View>
+                    <View style={style.textContainer}>
+                        <Text style={style.titleSize}>{coinItem.symbol}</Text>
+                        <Text>{coinItem.price_usd}</Text>
+                    </View>
+                    <Button onPress={() => this.getCoinSymbol(coinItem.symbol)}>
+                        More info
+                    </Button>
+                </CardSection>
+
+                <CardSection>
+                    <Image source={require('../assets/image/btc.png')} style={style.imageItem}></Image>
+                </CardSection>
+                {this.renderCoinDescription()}
+            </Card>
+        );
+    }
 }
 
 const style = {
@@ -57,4 +83,11 @@ const style = {
     }
 }
 
-export default CoinsDetail;
+const mapStateToProps = (state, ownProps) => {
+    const expanded =  state.selection === ownProps.coinItem.symbol
+    return {
+        expanded
+    }
+}
+
+export default connect(mapStateToProps, actions)(CoinsDetail);
