@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Platform, StyleSheet, Text, View } from 'react-native';
 import firebase from "firebase";
 import { Provider } from 'react-redux';
+import ReduxThunk from 'redux-thunk'
 import store from './src/store';
 import { Header, Button, Spinner } from './src/components/common';
 import LoginForm from './src/components/LoginForm';
@@ -12,7 +13,7 @@ export default class App extends Component<{}> {
   constructor(props) {
     super(props);
     this.state = {
-      loggedIn: true
+      loggedIn: null
     };
   }
 
@@ -28,11 +29,11 @@ export default class App extends Component<{}> {
     };
 
     firebase.initializeApp(config);
-    // firebase.auth().onAuthStateChanged((user) => {
-    //   user
-    //     ? this.setState({ loggedIn: true })
-    //     : this.setState({ loggedIn: false });
-    // })
+    firebase.auth().onAuthStateChanged((user) => {
+      user
+        ? this.setState({ loggedIn: true })
+        : this.setState({ loggedIn: false });
+    })
   }
 
   renderContent() {
@@ -40,7 +41,7 @@ export default class App extends Component<{}> {
     switch (this.state.loggedIn) {
       case true:
         return (
-          <View style={{flex: 1}}>
+          <View style={{ flex: 1 }}>
             <Button style={containerStyle} onPress={() => { firebase.auth().signOut() }}>Log out!</Button>
             <CoinsList />
           </View>
@@ -58,7 +59,7 @@ export default class App extends Component<{}> {
   render() {
     return (
       <Provider store={store}>
-        <View style={{flex: 1}}>
+        <View style={{ flex: 1 }}>
           <Header headerText={'Bit Currencies Checker'}></Header >
           {this.renderContent()}
         </View>

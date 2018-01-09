@@ -1,4 +1,4 @@
-import RNFS from 'react-native-fs';
+// import RNFS from 'react-native-fs';
 
 import KRB from './assets/image/icons/KRB.png';
 import ARDR from './assets/image/icons/ARDR.png';
