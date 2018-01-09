@@ -16,8 +16,8 @@ const styles = StyleSheet.create({
         paddingVertical: 5
     },
     containerStyle: {
-        flex: 1,
-        borderWidth: 1,
+        // flex: 1,
+        // borderWidth: 1,
         borderColor: 'blue'
     }
 })

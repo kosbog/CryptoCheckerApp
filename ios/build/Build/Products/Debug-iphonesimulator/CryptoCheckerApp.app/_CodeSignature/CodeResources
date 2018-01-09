@@ -6,7 +6,7 @@
 	<dict>
 		<key>Base.lproj/LaunchScreen.nib</key>
 		<data>
-		fIWgVoj6yCEuugkLk6EyK/bbUDk=
+		FntBD6WPW+pNfXsqcQwL+C/vwiI=
 		</data>
 		<key>Frameworks/IDEBundleInjection.framework/IDEBundleInjection</key>
 		<data>
@@ -51,7 +51,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		hh/w/OfQ+dRLRtr07E3YT4gBLZo=
+		3TV8KktFZalaN7l4Y9G67BFGhZU=
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -63,19 +63,19 @@
 		</data>
 		<key>PlugIns/CryptoCheckerAppTests.xctest.dSYM/Contents/Resources/DWARF/CryptoCheckerAppTests</key>
 		<data>
-		pzPZvp+LvTIY7h/TX29xv9+1Pv4=
+		ftPPJlwRNseuCN583IiW+MnRzfk=
 		</data>
 		<key>PlugIns/CryptoCheckerAppTests.xctest/CryptoCheckerAppTests</key>
 		<data>
-		4EGkWveFUnMfWR3qPX+87lHitbc=
+		gAJWmz6lHoBRiuHIXey4X9pInWQ=
 		</data>
 		<key>PlugIns/CryptoCheckerAppTests.xctest/Info.plist</key>
 		<data>
-		0YrfHCqNO2Zgyi4D8GgXdMkfqY8=
+		3gm1wKcjZz8gHi+jZE4T3A+OM0c=
 		</data>
 		<key>PlugIns/CryptoCheckerAppTests.xctest/_CodeSignature/CodeResources</key>
 		<data>
-		RfSjr+eGf+9UQLPlsis0yAysYAA=
+		BkAhckuu1giCMMPXjC+iVvLIycU=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -84,11 +84,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			fIWgVoj6yCEuugkLk6EyK/bbUDk=
+			FntBD6WPW+pNfXsqcQwL+C/vwiI=
 			</data>
 			<key>hash2</key>
 			<data>
-			bJdnBTYpWxizW9DOvySEXLzlsMAudTh0pBNY2xukkng=
+			3moGWMutGDv14hceFx6eyql45il9cLYD4ajRWJDVcLA=
 			</data>
 		</dict>
 		<key>Frameworks/IDEBundleInjection.framework/IDEBundleInjection</key>
@@ -207,44 +207,44 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			pzPZvp+LvTIY7h/TX29xv9+1Pv4=
+			ftPPJlwRNseuCN583IiW+MnRzfk=
 			</data>
 			<key>hash2</key>
 			<data>
-			I5nZwqQA2N4qrB5Sku4oGGZjzd8yFADAiMfl03YaB8c=
+			bKzBCP+DGFgNdp4o++ohaeiNdT68wHC72+i0Gp30ZoU=
 			</data>
 		</dict>
 		<key>PlugIns/CryptoCheckerAppTests.xctest/CryptoCheckerAppTests</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			4EGkWveFUnMfWR3qPX+87lHitbc=
+			gAJWmz6lHoBRiuHIXey4X9pInWQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			+84EBiwcjbOWd4hmIfSff6NPveGqV6pPw3X3gYIKCkI=
+			/EqyfxlnQ6afY4C4y09dqhmDnhYLFegJn1e4zW/yjVc=
 			</data>
 		</dict>
 		<key>PlugIns/CryptoCheckerAppTests.xctest/Info.plist</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			0YrfHCqNO2Zgyi4D8GgXdMkfqY8=
+			3gm1wKcjZz8gHi+jZE4T3A+OM0c=
 			</data>
 			<key>hash2</key>
 			<data>
-			Nghv/SvAJGN/PZFb24/06LX0VNkecX3PGOAgIfwPdtI=
+			jPLxTH9BVVmQy230RgOpn+15EHZJ33qWcj1SN6363wI=
 			</data>
 		</dict>
 		<key>PlugIns/CryptoCheckerAppTests.xctest/_CodeSignature/CodeResources</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			RfSjr+eGf+9UQLPlsis0yAysYAA=
+			BkAhckuu1giCMMPXjC+iVvLIycU=
 			</data>
 			<key>hash2</key>
 			<data>
-			w3QkdBDOSO8TrmA/ZGFKZG6F0L69SQAgeCoVJuyrjcs=
+			TNa0BCyl9u2hXqrIV0sV9z/E8eY894ZoFvjwxdlW3Vc=
 			</data>
 		</dict>
 	</dict>

@@ -14,7 +14,7 @@ class CoinsList extends Component {
     }
 
     componentDidMount() {
-        API.getCoinsList('EUR').then((response) => {
+        API.getDefaultCoinsList('EUR').then((response) => {
             this.setState({
                 coins: response.data
             });
@@ -27,7 +27,7 @@ class CoinsList extends Component {
 
     render() {
         return (
-            <View>
+            <View style={{flex: 1}}>
                 { this.state.coins !== null &&
                     <FlatList
                         keyExtractor={this.keyExtractor}

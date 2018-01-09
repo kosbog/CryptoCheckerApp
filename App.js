@@ -12,7 +12,7 @@ export default class App extends Component<{}> {
   constructor(props) {
     super(props);
     this.state = {
-      loggedIn: null
+      loggedIn: true
     };
   }
 
@@ -28,11 +28,11 @@ export default class App extends Component<{}> {
     };
 
     firebase.initializeApp(config);
-    firebase.auth().onAuthStateChanged((user) => {
-      user
-        ? this.setState({ loggedIn: true })
-        : this.setState({ loggedIn: false });
-    })
+    // firebase.auth().onAuthStateChanged((user) => {
+    //   user
+    //     ? this.setState({ loggedIn: true })
+    //     : this.setState({ loggedIn: false });
+    // })
   }
 
   renderContent() {
@@ -40,7 +40,7 @@ export default class App extends Component<{}> {
     switch (this.state.loggedIn) {
       case true:
         return (
-          <View>
+          <View style={{flex: 1}}>
             <Button style={containerStyle} onPress={() => { firebase.auth().signOut() }}>Log out!</Button>
             <CoinsList />
           </View>
@@ -58,9 +58,7 @@ export default class App extends Component<{}> {
   render() {
     return (
       <Provider store={store}>
-        <View style={{
-          flex: 1
-        }}>
+        <View style={{flex: 1}}>
           <Header headerText={'Bit Currencies Checker'}></Header >
           {this.renderContent()}
         </View>

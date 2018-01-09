@@ -4,6 +4,7 @@ import {Button, Card, CardSection} from './common';
 import * as actions from '../actions';
 import {connect} from 'react-redux';
 import IMAGES from '../IMAGES';
+import S from '../assets/styles/styles';
 
 class CoinsDetail extends Component {
 
@@ -11,9 +12,9 @@ class CoinsDetail extends Component {
         super(props);
     }
 
-    componentWillUpdate() {
-        LayoutAnimation.spring();
-    }
+    // componentWillUpdate() {
+    //     LayoutAnimation.spring();
+    // }
     
     symbolImage = (val) => {
         let images = IMAGES._ICONS;
@@ -37,6 +38,7 @@ class CoinsDetail extends Component {
     }
 
     render() {
+        console.log(S);
         const {coinItem} = this.props;
         return (
             <Card>
@@ -55,7 +57,7 @@ class CoinsDetail extends Component {
                 </CardSection>
 
                 <CardSection>
-                    <Image source={require('../assets/image/btc.png')} style={style.imageItem}></Image>
+                    <Image source={this.symbolImage(coinItem.symbol)} style={style.imageItem}></Image>
                 </CardSection>
                 {this.renderCoinDescription()}
             </Card>
