@@ -10,29 +10,13 @@ class LoginForm extends Component {
         super(props);
         this.state = {
             email: '',
-            password: '',
-            error: '',
-            loading: false
+            password: ''
         };
     }
 
     onButtonPress() {
         const { email, password } = this.props;
-
         this.props.loginUser({ email, password })
-        // this.setState({ error: '', loading: true })
-
-        // firebase
-        //     .auth()
-        //     .signInWithEmailAndPassword(email, password)
-        //     .then(() => this.onLoginSuccess())
-        //     .catch(() => {
-        //         firebase
-        //             .auth()
-        //             .createUserWithEmailAndPassword(email, password)
-        //             .then(() => this.onLoginSuccess())
-        //             .catch(() => this.onLoginFail())
-        //     })
     }
 
     onEmailChange(text) {
@@ -43,18 +27,8 @@ class LoginForm extends Component {
         this.props.passwordChanged(text);
     }
 
-    onLoginFail() {
-        alert(`Login failed with:\n Email: ${this.state.email} \n Pass: ${this.state.password} `);
-        this.setState({ error: 'Auth failed', loading: false });
-    }
-
-    onLoginSuccess() {
-        alert(`Login successfull with:\n Email: ${this.state.email} \n Pass: ${this.state.password} `);
-        this.setState({ email: '', password: '', loading: false, error: '' });
-    }
-
     renderButton() {
-        return this.state.loading
+        return this.props.loading
             ? <Spinner />
             : <Button onPress={() => this.onButtonPress()}>Log in</Button>
     }
@@ -81,7 +55,7 @@ class LoginForm extends Component {
                 </CardSection>
 
                 <Text style={styles.errorStyle}>
-                    {this.state.error}
+                    {this.props.error}
                 </Text>
 
                 <CardSection>
@@ -103,7 +77,9 @@ const styles = {
 const mapStateToProps = (state) => {
     return {
         email: state.auth.email,
-        password: state.auth.password
+        password: state.auth.password,
+        error: state.auth.error,
+        loading: state.auth.loading
     }
 }
 
