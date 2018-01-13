@@ -7,6 +7,7 @@ import store from './src/store';
 import { Header, Button, Spinner } from './src/components/common';
 import LoginForm from './src/components/LoginForm';
 import CoinsList from './src/components/CoinsList';
+import Router from './src/Router';
 
 export default class App extends Component<{}> {
 
@@ -61,7 +62,8 @@ export default class App extends Component<{}> {
       <Provider store={store}>
         <View style={{ flex: 1 }}>
           <Header headerText={'Bit Currencies Checker'}></Header >
-          {this.renderContent()}
+          {/* {this.renderContent()} */}
+          <Router />
         </View>
       </Provider>
     );

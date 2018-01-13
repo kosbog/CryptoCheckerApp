@@ -8,10 +8,6 @@ import { emailChanged, passwordChanged, loginUser } from '../actions';
 class LoginForm extends Component {
     constructor(props) {
         super(props);
-        this.state = {
-            email: '',
-            password: ''
-        };
     }
 
     onButtonPress() {

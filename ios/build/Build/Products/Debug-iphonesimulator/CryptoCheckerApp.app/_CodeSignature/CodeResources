@@ -63,19 +63,19 @@
 		</data>
 		<key>PlugIns/CryptoCheckerAppTests.xctest.dSYM/Contents/Resources/DWARF/CryptoCheckerAppTests</key>
 		<data>
-		etcCEQMnCnELLkW+IQpTHyN6SAM=
+		n+ZXPtlRoUeBR6/ZgGub03Pf8Hc=
 		</data>
 		<key>PlugIns/CryptoCheckerAppTests.xctest/CryptoCheckerAppTests</key>
 		<data>
-		cGBq88ZIuGQcUnyHpWl/EnFkwnM=
+		/GXI1ti7QVloXxjepS2kOD2NcJ8=
 		</data>
 		<key>PlugIns/CryptoCheckerAppTests.xctest/Info.plist</key>
 		<data>
-		3gm1wKcjZz8gHi+jZE4T3A+OM0c=
+		0YrfHCqNO2Zgyi4D8GgXdMkfqY8=
 		</data>
 		<key>PlugIns/CryptoCheckerAppTests.xctest/_CodeSignature/CodeResources</key>
 		<data>
-		BkAhckuu1giCMMPXjC+iVvLIycU=
+		RfSjr+eGf+9UQLPlsis0yAysYAA=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -207,44 +207,44 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			etcCEQMnCnELLkW+IQpTHyN6SAM=
+			n+ZXPtlRoUeBR6/ZgGub03Pf8Hc=
 			</data>
 			<key>hash2</key>
 			<data>
-			HaeOU8AQi/gcqKiLZrF/mhQvC4bwpTcBo2+zTNLffyg=
+			LRzIHEr2kBx4UuDh8JKRxGlkQ6D1JEJmyA1R+vT0+YY=
 			</data>
 		</dict>
 		<key>PlugIns/CryptoCheckerAppTests.xctest/CryptoCheckerAppTests</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			cGBq88ZIuGQcUnyHpWl/EnFkwnM=
+			/GXI1ti7QVloXxjepS2kOD2NcJ8=
 			</data>
 			<key>hash2</key>
 			<data>
-			hZ9pMbMpHzC5UgIIQck0qwUmYN7NnGSnoAwgFuFqNxg=
+			Dig/27mc0bVUMuGd7kpfpto14L83DblsnkBpm+lNwso=
 			</data>
 		</dict>
 		<key>PlugIns/CryptoCheckerAppTests.xctest/Info.plist</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			3gm1wKcjZz8gHi+jZE4T3A+OM0c=
+			0YrfHCqNO2Zgyi4D8GgXdMkfqY8=
 			</data>
 			<key>hash2</key>
 			<data>
-			jPLxTH9BVVmQy230RgOpn+15EHZJ33qWcj1SN6363wI=
+			Nghv/SvAJGN/PZFb24/06LX0VNkecX3PGOAgIfwPdtI=
 			</data>
 		</dict>
 		<key>PlugIns/CryptoCheckerAppTests.xctest/_CodeSignature/CodeResources</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			BkAhckuu1giCMMPXjC+iVvLIycU=
+			RfSjr+eGf+9UQLPlsis0yAysYAA=
 			</data>
 			<key>hash2</key>
 			<data>
-			TNa0BCyl9u2hXqrIV0sV9z/E8eY894ZoFvjwxdlW3Vc=
+			w3QkdBDOSO8TrmA/ZGFKZG6F0L69SQAgeCoVJuyrjcs=
 			</data>
 		</dict>
 	</dict>
