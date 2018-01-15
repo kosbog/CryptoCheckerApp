@@ -1,8 +1,12 @@
 
 # List of tools
 
-- Storybook UI | https://storybook.js.org/
+--- Storybook UI | https://storybook.js.org/ :
+        to start `yarn run storybook`
+
+--- react-native-router-flux | https://github.com/aksonov/react-native-router-flux :
+        navigation for ReactNative
 
 # API (cryptocurrencies data)
 
-- https://coinmarketcap.com/api/
+--- https://coinmarketcap.com/api/
