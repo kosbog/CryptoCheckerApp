@@ -6,7 +6,7 @@
 	<dict>
 		<key>Base.lproj/LaunchScreen.nib</key>
 		<data>
-		BKEb8jrwmGOEsYq02H1vWO7UP3I=
+		F+KfuacQrlO5bOryzeyUA3efwu0=
 		</data>
 		<key>Frameworks/IDEBundleInjection.framework/IDEBundleInjection</key>
 		<data>
@@ -51,7 +51,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		hh/w/OfQ+dRLRtr07E3YT4gBLZo=
+		3TV8KktFZalaN7l4Y9G67BFGhZU=
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -63,11 +63,11 @@
 		</data>
 		<key>PlugIns/CryptoCheckerAppTests.xctest.dSYM/Contents/Resources/DWARF/CryptoCheckerAppTests</key>
 		<data>
-		n+ZXPtlRoUeBR6/ZgGub03Pf8Hc=
+		ztIWqYguGb+TbYtVK57m/Lt61Vs=
 		</data>
 		<key>PlugIns/CryptoCheckerAppTests.xctest/CryptoCheckerAppTests</key>
 		<data>
-		/GXI1ti7QVloXxjepS2kOD2NcJ8=
+		6m/q0qU+xXku6OUI8TH1GBW4xN0=
 		</data>
 		<key>PlugIns/CryptoCheckerAppTests.xctest/Info.plist</key>
 		<data>
@@ -84,11 +84,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			BKEb8jrwmGOEsYq02H1vWO7UP3I=
+			F+KfuacQrlO5bOryzeyUA3efwu0=
 			</data>
 			<key>hash2</key>
 			<data>
-			kJ1oQ8iPc3WePpJLVy5rO6SBZtC7M0Q6flh5PNonWjU=
+			HsL2kvWrsyTOfrF31Y6moQ17+w+avqO++MS0Pw0nENQ=
 			</data>
 		</dict>
 		<key>Frameworks/IDEBundleInjection.framework/IDEBundleInjection</key>
@@ -207,22 +207,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			n+ZXPtlRoUeBR6/ZgGub03Pf8Hc=
+			ztIWqYguGb+TbYtVK57m/Lt61Vs=
 			</data>
 			<key>hash2</key>
 			<data>
-			LRzIHEr2kBx4UuDh8JKRxGlkQ6D1JEJmyA1R+vT0+YY=
+			2rwrprmBijxjYOf2mlWdKheewZ1LTw66S5QhWb1xWz8=
 			</data>
 		</dict>
 		<key>PlugIns/CryptoCheckerAppTests.xctest/CryptoCheckerAppTests</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			/GXI1ti7QVloXxjepS2kOD2NcJ8=
+			6m/q0qU+xXku6OUI8TH1GBW4xN0=
 			</data>
 			<key>hash2</key>
 			<data>
-			Dig/27mc0bVUMuGd7kpfpto14L83DblsnkBpm+lNwso=
+			P/LNAT9GHkR7g00Tt8/3aMo50papSGamPk8/xlEHnVI=
 			</data>
 		</dict>
 		<key>PlugIns/CryptoCheckerAppTests.xctest/Info.plist</key>

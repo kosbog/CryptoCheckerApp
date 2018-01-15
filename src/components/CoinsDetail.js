@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import {View, Text, Image, LayoutAnimation} from 'react-native';
+import PropTypes from 'prop-types';
+import {View, Text, Image } from 'react-native';
 import {Button, Card, CardSection} from './common';
 import * as actions from '../actions';
 import {connect} from 'react-redux';
@@ -7,6 +8,12 @@ import IMAGES from '../IMAGES';
 import S from '../assets/styles/styles';
 
 class CoinsDetail extends Component {
+
+    static propTypes = {
+        coinItem: PropTypes.object,
+        expanded: PropTypes.bool,
+        selectCoin: PropTypes.func
+    }
 
     constructor(props) {
         super(props);
@@ -18,7 +25,7 @@ class CoinsDetail extends Component {
     
     symbolImage = (val) => {
         let images = IMAGES._ICONS;
-        for (key in images) {
+        for (let key in images) {
             if (key === val) {
                 return images[key];
             }
@@ -43,23 +50,23 @@ class CoinsDetail extends Component {
         return (
             <Card>
                 <CardSection direction='row' justify='space-between' align='center'>
-                    <View style={style.imageContainer}>
-                        {/* FIXME: fix image import */}
-                        <Image source={this.symbolImage(coinItem.symbol)}></Image>
+                    <View style={ style.imageContainer }>
+                        { /* FIXME: fix image import */ }
+                        <Image source={ this.symbolImage(coinItem.symbol) }></Image>
                     </View>
-                    <View style={style.textContainer}>
-                        <Text style={style.titleSize}>{coinItem.symbol}</Text>
-                        <Text>{coinItem.price_usd}</Text>
+                    <View style={ style.textContainer }>
+                        <Text style={ style.titleSize }>{ coinItem.symbol }</Text>
+                        <Text>{ coinItem.price_usd }</Text>
                     </View>
-                    <Button onPress={() => this.getCoinSymbol(coinItem.symbol)}>
+                    <Button onPress={ () => this.getCoinSymbol(coinItem.symbol) }>
                         More info
                     </Button>
                 </CardSection>
 
                 <CardSection>
-                    <Image source={this.symbolImage(coinItem.symbol)} style={style.imageItem}></Image>
+                    <Image source={ this.symbolImage(coinItem.symbol) } style={ style.imageItem }></Image>
                 </CardSection>
-                {this.renderCoinDescription()}
+                { this.renderCoinDescription() }
             </Card>
         );
     }
