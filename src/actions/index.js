@@ -1,5 +1,6 @@
 import firebase from "firebase";
 import { EMAIL_CHANGED, PASSWORD_CHANGED, LOGIN_SUCCESS, LOGIN_FAIL, LOGIN_IN_ACTION } from './types';
+import { Actions } from "react-native-router-flux";
 
 export const selectCoin = (coinSymbol) => {
     return { type: 'SELECT_COINS', payload: coinSymbol }
@@ -34,4 +35,5 @@ const loginFail = (dispatch) => {
 
 const loginSuccess = (dispatch, user) => {
     dispatch({ type: LOGIN_SUCCESS, payload: user });
+    Actions.coinsList();
 }
