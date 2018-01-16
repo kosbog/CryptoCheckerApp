@@ -1,5 +1,5 @@
 import React from 'react';
-import { Scene, Router } from "react-native-router-flux";
+import { Scene, Router, Stack } from "react-native-router-flux";
 import LoginForm from './components/LoginForm';
 import CoinsList from './components/CoinsList';
 
@@ -7,10 +7,13 @@ const RouterComponent = () => {
     return (
         <Router sceneStyle={{ backgroundColor: '#fff' }}>
             <Scene key='root'>
-                    <Scene key='login' component={LoginForm} title='Please login' />
-                
+                <Stack key='auth' hideNavBar>
+                    <Scene key='login' component={LoginForm} title='Please login'  />
+                </Stack>
+                <Stack key='main' >
                     <Scene key='coinsList' component={CoinsList} title='Coins list' />
-                </Scene>
+                </Stack>
+            </Scene>
         </Router>
     )
 }

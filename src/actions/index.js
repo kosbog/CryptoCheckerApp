@@ -35,5 +35,5 @@ const loginFail = (dispatch) => {
 
 const loginSuccess = (dispatch, user) => {
     dispatch({ type: LOGIN_SUCCESS, payload: user });
-    Actions.coinsList();
+    Actions.main();
 }
